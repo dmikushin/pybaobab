@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-setup.cfg
-src/pybaobab/__init__.py
-src/pybaobab.egg-info/PKG-INFO
-src/pybaobab.egg-info/SOURCES.txt
-src/pybaobab.egg-info/dependency_links.txt
-src/pybaobab.egg-info/top_level.txt

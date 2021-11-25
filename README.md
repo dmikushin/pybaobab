@@ -1,6 +1,6 @@
-# pybaobab Package
+# pybaobabdt Package
 
-The pybaobab package provides a python implementation for the visualization of decision trees. 
+The pybaobabdt package provides a python implementation for the visualization of decision trees. 
 The technique is based on the scientific paper <a href="https://ieeexplore.ieee.org/document/6102453" target="_blank">BaobabView: Interactive construction and analysis of decision trees</a> developed by the TU/e.
 A typical decision tree is visualized using a standard node link diagram:
 
@@ -20,7 +20,7 @@ color, the width of the link represents the number of items flowing from one nod
 Currently it is supported on Python3.6 onwards. The package can be installed through pip:
 
 ```py
-$ pip install pybaobab
+$ pip install pybaobabdt
 ```
 
 ### Requirements
@@ -43,7 +43,7 @@ The following example illustrates the ease of use of this package. First build (
 with sklearn: 
 
 ```py
-import pybaobab
+import pybaobabdt
 import pandas as pd
 from scipy.io import arff
 from sklearn.tree import DecisionTreeClassifier
@@ -60,7 +60,7 @@ clf = DecisionTreeClassifier().fit(X,y)
 ```
 Next, use pybaobab to visualize it:
 ```py
-ax = pybaobab.drawTree(clf, size=10, dpi=72, features=features)
+ax = pybaobabdt.drawTree(clf, size=10, dpi=72, features=features)
 ```
 
 <img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_example.png" width="100%" align="center"/>
@@ -73,7 +73,7 @@ ax.get_figure().savefig('tree.png', format='png', dpi=300, transparent=True)
 Also, trees from a RandomForest classifier can be visualized and saved to a high-resolution image for inspection:
 
 ```py
-import pybaobab
+import pybaobabdt
 import pandas as pd
 from scipy.io import arff
 import matplotlib.pyplot as plt
@@ -100,7 +100,7 @@ fig = plt.figure(figsize=size, dpi=300)
 
 for idx, tree in enumerate(clf.estimators_):
     ax1 = fig.add_subplot(5, 4, idx+1)
-    pybaobab.drawTree(tree, model=clf, size=15, dpi=300, features=features, ax=ax1)
+    pybaobabdt.drawTree(tree, model=clf, size=15, dpi=300, features=features, ax=ax1)
     
 fig.savefig('random-forest.png', format='png', dpi=1200, transparent=True)
 ```
@@ -118,7 +118,7 @@ You can also define your own colormap, which could be useful to highlight a spec
 colors = ["gray", "gray", "purple", "gray"]
 colorMap = ListedColormap(colors)
 
-ax = pybaobab.drawTree(clf, size=10, dpi=72, features=features, colormap=colorMap)
+ax = pybaobabdt.drawTree(clf, size=10, dpi=72, features=features, colormap=colorMap)
 ```
 
 <img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_oneclass.png" width="100%" align="center"/>

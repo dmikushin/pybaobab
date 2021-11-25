@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pybaobabdt/__init__.py
+src/pybaobabdt.egg-info/PKG-INFO
+src/pybaobabdt.egg-info/SOURCES.txt
+src/pybaobabdt.egg-info/dependency_links.txt
+src/pybaobabdt.egg-info/top_level.txt

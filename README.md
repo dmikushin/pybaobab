@@ -4,13 +4,13 @@ The pybaobab package provides a python implementation for the visualization of d
 The technique is based on the scientific paper <a href="https://ieeexplore.ieee.org/document/6102453" target="_blank">BaobabView: Interactive construction and analysis of decision trees</a> developed by the TU/e.
 A typical decision tree is visualized using a standard node link diagram:
 
-<img src="images/vehicle_dt.png" width="100%" align="center">
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/vehicle_dt.png" width="100%" align="center">
 
 The problem, however, is that information is not easily extracted from this. Which classes are 
 easy to separate for example, which classes are similar, where does the main flow of items go etc.
 Therefore, we developed techniques to answer these questions with a scalable visualization:
 
-<img src="images/tree.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree.png" width="100%" align="center"/>
 
 Note, this is the same decision tree as the standard node-link diagram above. Each class is represented by a
 color, the width of the link represents the number of items flowing from one node to the other.
@@ -63,7 +63,7 @@ Next, use pybaobab to visualize it:
 ax = pybaobab.drawTree(clf, size=10, dpi=72, features=features)
 ```
 
-<img src="images/tree_example.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_example.png" width="100%" align="center"/>
 
 You can then save it to a file with for example:
 ```py
@@ -104,7 +104,7 @@ for idx, tree in enumerate(clf.estimators_):
     
 fig.savefig('random-forest.png', format='png', dpi=1200, transparent=True)
 ```
-<img src="images/random-forest.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/random-forest.png" width="100%" align="center"/>
 
 ### Options
 
@@ -121,16 +121,16 @@ colorMap = ListedColormap(colors)
 ax = pybaobab.drawTree(clf, size=10, dpi=72, features=features, colormap=colorMap)
 ```
 
-<img src="images/tree_oneclass.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_oneclass.png" width="100%" align="center"/>
 
 * maxdepth=3 (set the maximum depth of the tree to render, this can be useful for large trees, to inspect only the top splits.)
 
 
-<img src="images/tree_maxdepth.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_maxdepth.png" width="100%" align="center"/>
 
 * ratio=0.5 (sets the aspect ratio of the tree, default = 1)
 
-<img src="images/tree_ratio.png" width="100%" align="center"/>
+<img src="https://gitlab.tue.nl/20040367/pybaobab/-/raw/main/images/tree_ratio.png" width="100%" align="center"/>
 
 Note that examples can be found in the 'notebooks' folder containing jupyter notebook examples.
 

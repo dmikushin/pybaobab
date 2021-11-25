@@ -119,7 +119,10 @@ def drawTree(decisionTreeClassifier, features=[], model=[], colormap='viridis', 
     #print('Mapping:', mapClasses)
 
     nClasses = len(class_names) #len(dataset.target_names)
-    colors = (plt.cm.get_cmap(colormap, nClasses)) #Spectral, Blues, viridis
+    if isinstance(colormap, str):
+        colors = (plt.cm.get_cmap(colormap, nClasses)) #Spectral, Blues, viridis
+    else:
+        colors = colormap
 
     optimal_ordering = (classes == [])
     
